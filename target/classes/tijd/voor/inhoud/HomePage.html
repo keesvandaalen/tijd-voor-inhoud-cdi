@@ -5,6 +5,7 @@
 		<title>Tijd voor inhoud: CDI</title>
 	</head>
 	<body>
+		<h3>ApplicationScoped vs. RequestScoped</h3>
 		<table>
 			<thead>
 				<tr>
@@ -13,19 +14,32 @@
 					<th>Clicks</th>
 					<th>Refresh</th>
 				</tr>
-				<tr>
-					<td><span>Application</span></td>
-					<td><span wicket:id="app_counter"></span></td>
-					<td><span wicket:id="app_clicks"></span></td>
-					<td><a href="#" wicket:id="app_link">Refresh</a></td>
+			</thead>
+			<tbody>
+				<tr wicket:id="demo1">
+					<td><span wicket:id="scope">[Scope]</span></td>
+					<td><span wicket:id="scope_counter"></span></td>
+					<td><span wicket:id="clicks"></span></td>
+					<td><a href="#" wicket:id="link">Refresh</a></td>
 				</tr>
+			</tbody>
+		</table>
+		<h3>RequestScoped vs. Dependent</h3>
+		<table>
+			<thead>
 				<tr>
-					<td><span>Request</span></td>
-					<td><span wicket:id="req_counter"></span></td>
-					<td><span wicket:id="req_clicks"></span></td>
-					<td><a href="#" wicket:id="req_link">Refresh</a></td>
+					<th>Nr.</th>
+					<th>Request</th>
+					<th>Dependent</th>
 				</tr>
 			</thead>
+			<tbody>
+				<tr wicket:id="demo2">
+					<td><span wicket:id="num"></span></td>
+					<td><span wicket:id="request"></span></td>
+					<td><span wicket:id="dependent"></span></td>
+				</tr>
+			</tbody>
 		</table>
 	</body>
 </html>

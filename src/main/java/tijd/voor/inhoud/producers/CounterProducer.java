@@ -17,6 +17,7 @@ public class CounterProducer
 	{
 		applicationScopedCounter = new Counter();
 		requestScopedCounter = new Counter();
+		dependentCounter = new Counter();
 	}
 	
 	@Produces 
@@ -36,7 +37,7 @@ public class CounterProducer
 	}
 	
 	@Produces
-	@CounterScope(Scope.Dependend)
+	@CounterScope(Scope.Dependent)
 	public Counter produceDependendScopedCounter()
 	{
 		return dependentCounter.increment();

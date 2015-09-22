@@ -6,5 +6,5 @@ public enum Scope
 	Application,
 	Session,
 	Request,
-	Dependend
+	Dependent
 }

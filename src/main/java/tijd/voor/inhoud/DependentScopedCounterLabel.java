@@ -3,20 +3,20 @@ package tijd.voor.inhoud;
 import javax.inject.Inject;
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.model.Model;
 
 import tijd.voor.inhoud.producers.Counter;
 import tijd.voor.inhoud.producers.CounterScope;
 import tijd.voor.inhoud.producers.Scope;
 
-class DependendScopedCounterLabel extends Label
+class DependentScopedCounterLabel extends Label
 {
 	private static final long serialVersionUID = 1L;
 
-	@Inject @CounterScope(Scope.Dependend)
+	@Inject @CounterScope(Scope.Dependent)
 	private Counter counter;
 	
-	public DependendScopedCounterLabel(String id) 
+	public DependentScopedCounterLabel(String id) 
 	{
 		super(id);
 	}
@@ -25,6 +25,6 @@ class DependendScopedCounterLabel extends Label
 	protected void onInitialize() 
 	{
 		super.onInitialize();
-		setDefaultModel(new PropertyModel<>(counter, "count"));
+		setDefaultModel(Model.of(counter.getCount()));
 	}
 }
