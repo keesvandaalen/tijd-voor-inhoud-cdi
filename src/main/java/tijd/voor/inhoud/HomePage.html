@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Tijd voor inhoud: CDI</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Scope</th>
+					<th>Counter</th>
+					<th>Clicks</th>
+					<th>Refresh</th>
+				</tr>
+				<tr>
+					<td><span>Application</span></td>
+					<td><span wicket:id="app_counter"></span></td>
+					<td><span wicket:id="app_clicks"></span></td>
+					<td><a href="#" wicket:id="app_link">Refresh</a></td>
+				</tr>
+				<tr>
+					<td><span>Request</span></td>
+					<td><span wicket:id="req_counter"></span></td>
+					<td><span wicket:id="req_clicks"></span></td>
+					<td><a href="#" wicket:id="req_link">Refresh</a></td>
+				</tr>
+			</thead>
+		</table>
+	</body>
+</html>
